@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: #F3F4F6;
+    font-family: Arial, sans-serif;
+}
+
+/* ---- HEADER ---- */
+
+header {
+    background-color: #1F2937;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+}
+
+h1 {
+    padding: 10px;
+}
+
+/* NAV TOP*/
+nav {
+    margin-left: auto;
+}
+
+.links {
+    display: flex;
+    gap: 20px;
+}
+
+.links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.links a:hover {
+    background-color: #3B82F6;
+    color: white;
+}
+
+/* MAIN*/
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    padding: 60px 40px;
+}
+
+/* CARDS*/
+/* PROFILE CARd */
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 15px auto;
+    border: 3px solid #3B82F6;
+}
+
+.section1 p {
+    margin-top: 15px;
+    color: #374151;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.section1 h2 {
+    text-align: center;
+}
+
+.section1,
+.section2,
+.section3 {
+    background-color: white;
+    padding: 60px;
+    margin: 20px;              
+    border: 1px solid #E5E7EB;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    flex: 1;                 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section1:hover,
+.section2:hover,
+.section3:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+}
+/*  WEEKLY GOALS LIST */
+
+.goals-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 15px;
+}
+
+.goals-list li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #374151;
+    line-height: 1.6;
+}
+/*  STATUS PANEL */
+
+.status {
+    font-weight: 600;
+    margin-top: 15px;
+    position: relative;
+}
+
+/* ACTIVE label */
+.status::after {
+    content: "ACTIVE";
+    margin-left: 10px;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    background-color: #22C55E; /* green */
+    border-radius: 20px;
+}
+
+
+@media (max-width: 700px) {
+
+    
+    main {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .links {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-end;
+    }
+
+    body {
+        font-size: 14px;
+    }
+
+    .section1,
+    .section2,
+    .section3 {
+        padding: 30px;
+        margin: 10px;
+    }
+
+
+    .profile-img {
+        display: none;
+    }
+}
+.links a:hover {
+    background-color: #3B82F6;
+    color: white;
+    text-decoration: underline;
+}
+.section1:hover {
+    transform: scale(1.03);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+footer {
+    background-color: #1E293B;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    font-size: 14px;
+}
+footer p {
+    margin: 0;
+    letter-spacing: 0.5px;
+}
